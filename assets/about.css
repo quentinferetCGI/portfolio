@@ -12,10 +12,10 @@
 .quote small{position:relative;z-index:1;font-size:13px;color:rgba(255,255,255,.7)}
 
 .figs{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
-.figs ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
+.figs ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .figs li{padding:32px 24px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
 .figs li:first-child{border-left:0;padding-left:0}
-.figs .num{font-size:clamp(40px,5vw,64px);line-height:1;color:var(--ink)}
+.figs .num{overflow-wrap:anywhere;font-size:clamp(40px,5vw,64px);line-height:1;color:var(--ink)}
 .figs .num span.sfx,.figs .num span.pfx{color:var(--accent)}
 .figs p{margin:0;font-size:14px;color:var(--ink-3);max-width:22ch}
 
@@ -41,10 +41,10 @@
 .job{display:grid;grid-template-columns:200px 1fr auto;gap:8px 32px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px 28px;text-decoration:none;color:var(--ink);transition:transform var(--t) var(--ease),box-shadow var(--t),border-color var(--t)}
 .job:hover{transform:translateY(-3px);box-shadow:var(--shadow-1);border-color:var(--dot);color:var(--ink)}
 .job .when{font-size:14px;color:var(--ink-3);line-height:1.4}
-.job .when b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--dot);font-weight:700;margin-top:2px}
-.job h3{margin:0 0 4px;font-size:22px;letter-spacing:-.015em;font-weight:600}
-.job p{margin:0;font-size:15px;color:var(--ink-2)}
-.job .go{font-size:14px;font-weight:600;color:var(--dot);white-space:nowrap}
+.job .when b{display:block;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--dot);font-weight:700;margin-top:2px}
+.job .job-t{display:block;margin:0 0 4px;font-size:22px;letter-spacing:-.015em;font-weight:600}
+.job .job-d{display:block;margin:0;font-size:15px;color:var(--ink-2)}
+.job .go{font-size:14px;font-weight:600;color:var(--dot);overflow-wrap:anywhere}
 .job .go i{font-style:normal;display:inline-block;transition:transform var(--t) var(--ease)}
 .job:hover .go i{transform:translateX(4px)}
 .others{margin-top:40px}
@@ -68,12 +68,12 @@
 /* Formations */
 .edu{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .edu div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:24px;display:flex;flex-direction:column;gap:6px}
-.edu small{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink)}
+.edu small{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink)}
 .edu h3{margin:0;font-size:18px;line-height:1.3;font-weight:600}
 .edu p{margin:0;font-size:14px;color:var(--ink-3)}
 
 /* Contact */
-.contact{margin-top:var(--section);background:var(--ink);color:#fff;border-radius:var(--r-lg);padding:clamp(32px,5vw,64px);display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;align-items:center;position:relative;overflow:hidden}
+.contact{margin-top:var(--section);background:var(--ink);color:#fff;border-radius:var(--r-lg);padding:clamp(32px,5vw,64px);display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;align-items:center;position:relative;overflow:clip}
 .contact::after{content:"";position:absolute;right:-80px;bottom:-120px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle at 40% 40%,var(--accent),transparent 70%);opacity:.5}
 .contact h2{margin:0 0 8px;font-size:var(--fs-title);letter-spacing:-.025em;line-height:1.1;max-width:18ch}
 .contact p{margin:0;color:rgba(255,255,255,.75);max-width:44ch}
@@ -83,7 +83,7 @@
 @media (max-width:980px){
   .ab-hero .wrap{grid-template-columns:1fr}
   .quote{min-height:0}
-  .figs ul{grid-template-columns:1fr 1fr}
+  .figs ul{grid-template-columns:repeat(2,minmax(0,1fr))}
   .figs li:nth-child(odd){border-left:0;padding-left:0}
   .figs li:nth-child(n+3){border-top:1px solid var(--line)}
   .princ,.skills,.edu{grid-template-columns:1fr}

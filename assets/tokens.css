@@ -99,3 +99,7 @@ a{color:var(--accent-ink)}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .js .reveal{opacity:1;transform:none}
 }
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.site-footer small{display:block;font-size:13px;color:var(--ink-3)}
+.foot-nav ul{display:flex;flex-wrap:wrap;gap:4px 24px;margin:0;padding:0;list-style:none}
+.foot-nav a{display:inline-block;padding-block:6px;min-height:24px}

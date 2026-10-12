@@ -17,7 +17,7 @@
 .sys-top i:first-child{width:18px;height:18px;border-radius:6px;background:var(--ink)}
 .sys-body{position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:16px;padding-top:40px}
 .mol{position:relative;border:1.5px dashed transparent;border-radius:var(--r-md);padding:14px;display:flex;flex-direction:column;gap:10px;animation:molIn 600ms var(--ease) both}
-.mol b{position:absolute;top:-9px;left:12px;padding:0 6px;background:var(--surface);font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);opacity:0;animation:fadeIn 400ms var(--ease) both}
+.mol b{position:absolute;top:-9px;left:12px;padding:0 6px;background:var(--surface);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);opacity:0;animation:fadeIn 400ms var(--ease) both}
 .mol-search{grid-column:1/-1;flex-direction:row;align-items:center;animation-delay:2.0s}
 .mol-search b{animation-delay:2.1s}
 .mol-card{animation-delay:2.2s}
@@ -27,13 +27,13 @@
 .at{opacity:0;animation:atomIn 500ms var(--ease) both}
 .at-input{flex:1;height:34px;border-radius:9px;border:1px solid var(--line-strong);background:var(--bg);display:flex;align-items:center;padding:0 12px;gap:8px;animation-delay:.3s}
 .at-input i{display:block;width:60%;height:6px;border-radius:3px;background:var(--line-strong)}
-.at-btn{height:34px;padding:0 16px;border-radius:9px;background:var(--accent);display:grid;place-items:center;color:#fff;font-size:12px;font-weight:600}
+.at-btn{height:34px;padding:0 16px;border-radius:9px;background:var(--accent);display:grid;place-items:center;color:#fff;font-size:13px;font-weight:600}
 .at-search-btn{animation-delay:.5s}
 .at-img{height:76px;border-radius:10px;background:linear-gradient(135deg,var(--c1-soft),var(--accent-soft));animation-delay:.7s}
 .at-line{height:7px;border-radius:4px;background:var(--line-strong)}
 .at-line.s{width:62%}
 .at-t1{animation-delay:.9s}.at-t2{animation-delay:1.0s}
-.at-chip{align-self:flex-start;height:22px;padding:0 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font-size:11px;font-weight:600;display:grid;place-items:center;animation-delay:1.15s}
+.at-chip{align-self:flex-start;height:22px;padding:0 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink);font-size:13px;font-weight:600;display:grid;place-items:center;animation-delay:1.15s}
 .at-row{display:flex;align-items:center;gap:10px}
 .at-row .at-line{flex:1}
 .at-toggle{width:28px;height:16px;border-radius:999px;background:var(--line-strong);position:relative;flex:none}
@@ -59,10 +59,10 @@
 
 /* ---------- Bandeau de preuves ---------- */
 .proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
-.proof ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
+.proof ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .proof li{padding:32px 24px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
 .proof li:first-child{border-left:0;padding-left:0}
-.proof .num{font-size:clamp(36px,4.4vw,56px);line-height:1;color:var(--ink)}
+.proof .num{overflow-wrap:anywhere;font-size:clamp(36px,4.4vw,56px);line-height:1;color:var(--ink)}
 .proof .num span{color:var(--accent)}
 .proof p{margin:0;font-size:14px;color:var(--ink-3);max-width:24ch}
 
@@ -105,7 +105,7 @@
   .poster-body{flex:1 1 300px}
 }
 @media (max-width:720px){
-  .proof ul{grid-template-columns:1fr 1fr}
+  .proof ul{grid-template-columns:repeat(2,minmax(0,1fr))}
   .proof li:nth-child(odd){border-left:0;padding-left:0}
   .proof li:nth-child(n+3){border-top:1px solid var(--line)}
   .poster{flex-direction:column;flex-wrap:nowrap}
@@ -113,3 +113,4 @@
   .poster-body{flex:none}
   .nav{gap:20px}
 }
+@media (max-width:480px){.proof ul{grid-template-columns:minmax(0,1fr)}.proof li{border-left:0;padding-left:0}.proof li:nth-child(n+2){border-top:1px solid var(--line)}}

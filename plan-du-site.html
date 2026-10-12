@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan du site — Quentin Féret · Designer UX/UI</title>
+<meta name="description" content="Plan du site du portfolio de Quentin Féret : accueil, à propos, cas d’étude, résumés, réalisations et accessibilité.">
+<meta name="theme-color" content="#FAFAF8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%230E0F12%22/%3E%3Ctext x=%2232%22 y=%2242%22 font-family=%22Helvetica,Arial%22 font-size=%2226%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22%3EQF%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/legal.css">
+<script>document.documentElement.classList.add('js')</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="4f2ae9d7-1726-47b2-a085-174438b8aec9"></script>
+<link rel="canonical" href="https://quentinferetcgi.github.io/portfolio/plan-du-site.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Quentin Féret — Portfolio">
+<meta property="og:title" content="Plan du site — Quentin Féret · Designer UX/UI">
+<meta property="og:description" content="Plan du site du portfolio de Quentin Féret : accueil, à propos, cas d’étude, résumés, réalisations et accessibilité.">
+<meta property="og:url" content="https://quentinferetcgi.github.io/portfolio/plan-du-site.html">
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="index.html"><span class="mono" aria-hidden="true">QF</span><span>Quentin Féret <small>— Designer UX/UI</small></span></a>
+<nav class="nav" aria-label="Navigation principale">
+<a href="index.html">Projets</a>
+<a href="apropos.html">À propos</a>
+<a href="https://www.linkedin.com/in/quentin-feret" target="_blank" rel="noopener" data-umami-event="contact-linkedin">Contact<span class="sr-only"> (nouvel onglet)</span></a>
+</nav>
+</div>
+</header>
+
+<main id="contenu">
+<section class="lg" aria-labelledby="h1">
+<div class="wrap">
+<p class="eyebrow">Plan du site</p>
+<h1 class="display" id="h1" style="font-size:clamp(32px,4.4vw,52px)">Plan du site</h1>
+<p class="lede">Toutes les pages du portfolio.</p>
+</div>
+</section>
+<section class="lg-sec" aria-labelledby="s-plan"><div class="wrap">
+<h2 id="s-plan" class="sr-only">Liste des pages</h2>
+<ul class="sitemap"><li><a href="index.html">Accueil (Projets)</a></li><li><a href="apropos.html">À propos</a></li><li><a href="cas01.html">Cas d’étude 01 : SNCF Gares &amp; Connexions</a><ul><li><a href="cas01-resume.html">Résumé</a></li><li><a href="cas01-realisations.html">Réalisations</a></li><li><a href="cas01-produits.html">Produits</a></li></ul></li><li><a href="cas02.html">Cas d’étude 02 : Île-de-France Mobilités</a><ul><li><a href="cas02-resume.html">Résumé</a></li><li><a href="cas02-realisations.html">Réalisations</a></li></ul></li><li><a href="cas03.html">Cas d’étude 03 : Conseil d’État</a><ul><li><a href="cas03-resume.html">Résumé</a></li><li><a href="cas03-realisations.html">Réalisations</a></li></ul></li><li><a href="accessibilite.html">Accessibilité (déclaration d’accessibilité)</a></li><li><a href="plan-du-site.html">Plan du site</a></li></ul>
+</div></section>
+</main>
+
+<footer class="site-footer">
+<div class="wrap"><span>Quentin Féret · Portfolio <small>Statistiques de visite anonymes, sans cookie</small></span>
+<nav class="foot-nav" aria-label="Pied de page"><ul>
+<li><a href="accessibilite.html">Accessibilité : non évaluée</a></li>
+<li><a href="plan-du-site.html">Plan du site</a></li>
+<li><a href="https://www.linkedin.com/in/quentin-feret" target="_blank" rel="noopener" data-umami-event="contact-linkedin">Me contacter sur LinkedIn →<span class="sr-only"> (nouvel onglet)</span></a></li>
+</ul></nav></div>
+</footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||reduce){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  els.forEach(function(e){io.observe(e)});
+  document.querySelectorAll('[data-count]').forEach(function(n){
+    var to=+n.dataset.count,done=false;
+    var o=new IntersectionObserver(function(es){if(es[0].isIntersecting&&!done){done=true;var t0=performance.now();(function f(t){var p=Math.min((t-t0)/900,1);n.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(t0)}},{threshold:.6});
+    o.observe(n);
+  });
+})();
+</script>
+</body>
+</html>
