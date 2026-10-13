@@ -1,0 +1,185 @@
+import sys; sys.path.insert(0,'.')
+from common import *
+body = '''
+<!-- 1. EN-TÊTE -->
+<section class="ch" aria-labelledby="h1">
+<div class="wrap">
+<p class="crumb"><a href="index.html">Projets</a> / Cas d'étude 03</p>
+<div class="ch-top">
+<div>
+<p class="eyebrow" style="margin-bottom:16px">UX/UI × Design system</p>
+<h1 class="display" id="h1">Conseil d'État</h1>
+<p class="lead">Synchroniser 5 designers autour d'un design system commun, et intégrer l'accessibilité dès la conception pour la refonte graphique de Télérecours.</p>
+<ul class="tags"><li>Refonte graphique</li><li>Design system</li><li>Service public</li></ul>
+</div>
+<aside class="kpi-hero" aria-label="Chiffre clé">
+<span class="label">Périmètre</span>
+<span class="big num sm">5&nbsp;outils<br>5&nbsp;designers</span>
+<p>Les designers des outils de Télérecours, synchronisés autour d'un design system commun.</p>
+</aside>
+</div>
+<dl class="meta">
+<div><dt>Client</dt><dd>Conseil d'État</dd></div>
+<div><dt>Rôle</dt><dd>Designer UX/UI</dd></div>
+<div><dt>Période</dt><dd>Févr. 2022 – août 2023</dd></div>
+<div><dt>Équipe</dt><dd>CGI et la DSI du Conseil d'État</dd></div>
+<div><dt>Outils</dt><dd>Figma</dd></div>
+</dl>
+<div class="cover"><img src="assets/index-03.jpg" alt="Design system UI Kit V2.0 des services de Télérecours du Conseil d'État : boutons, liste déroulante, cases à cocher, champs de saisie, calendrier, dépôt de fichiers." width="2400" height="1350"></div>
+</div>
+</section>
+
+''' + SNAV.format(res="Ce qui a été mis en place") + '''
+<div class="wrap">
+
+<!-- 2. TL;DR -->
+<section class="sec" id="tldr" aria-labelledby="h-tldr" style="padding-top:64px">
+<div class="sec-head"><p class="k">En bref</p><h2 class="title" id="h-tldr">Le problème, ma décision, l'effet.</h2></div>
+<div class="tldr reveal">
+<div><h3>Problème</h3><p>Un fichier de livraison incomplet, et des règles HTML et d'accessibilité absentes du design system.</p></div>
+<div><h3>Décision</h3><p>Un circuit de validation avant le développement, et une documentation des composants qui intègre le RGAA.</p></div>
+<div><h3>Effet</h3><p>Une production plus réaliste, alignée avec les développeurs, et un process en 5 étapes partagé par 5 outils.</p></div>
+</div>
+</section>
+
+<!-- 3. CONTEXTE & ENJEU -->
+<section class="sec" id="contexte" aria-labelledby="h-ctx">
+<div class="sec-head"><p class="k">Contexte &amp; enjeu</p><h2 class="title" id="h-ctx">Un produit par designer, un seul système à partager.</h2></div>
+<div class="prose reveal">
+<p>L'outil Télérecours a fait l'objet d'une refonte graphique. À cette occasion, une recherche utilisateur a été lancée pour améliorer les fonctionnalités existantes. Chaque produit avait son designer, chargé d'en concevoir l'interface.</p>
+<p><strong style="color:var(--ink)">Mon rôle :</strong> accompagner chaque designer, synchroniser les évolutions entre les produits, les centraliser dans une librairie et les partager avec l'ensemble des designers.</p>
+</div>
+<figure class="fig reveal">
+<div class="img"><img src="assets/cas03-01.jpg" alt="Avant / après de Télérecours : l'ancienne liste des requêtes, puis le nouveau Portail contentieux avec onglets, filtres par statut et tableau aéré." loading="lazy" decoding="async"></div>
+<figcaption><h4>Avant / après · Liste des requêtes</h4><p>De l'ancien Télérecours au nouveau Portail contentieux : la même liste de requêtes, refondue graphiquement.</p></figcaption>
+</figure>
+
+<h3 class="sub">Périmètre — les 5 outils de Télérecours</h3>
+<div class="scope reveal">
+<div class="card"><h4>Télérecours citoyens</h4><ul><li>Refonte · une application plus accessible et plus ergonomique</li></ul></div>
+<div class="card"><h4>Télérecours avocats</h4><ul><li>Refonte · en adéquation avec les nouveaux usages</li></ul></div>
+<div class="card"><h4>Télérecours administrations</h4><ul><li>Conception · un Télérecours à destination des administrations</li></ul></div>
+<div class="card"><h4>Portail contentieux</h4><ul><li>Refonte et fusion · deux outils réunis en une seule application</li></ul></div>
+<div class="card"><h4>Annuaire des magistrats</h4><ul><li>Conception · un annuaire à destination des magistrats</li></ul></div>
+</div>
+<figure class="fig reveal">
+<div class="img"><img src="assets/cas03-02.jpg" alt="La liste des requêtes dans quatre outils : POCO, TR-ADM, TR-AVO et TRC, chacun avec une architecture d'information différente." loading="lazy" decoding="async"></div>
+<figcaption><h4>Une fonctionnalité, quatre architectures</h4><p>La liste des requêtes varie selon les besoins des chefs de projet et des utilisateurs de chaque outil : POCO, TR-ADM, TR-AVO et TRC.</p></figcaption>
+</figure>
+
+<h3 class="sub">Constat — une base déjà solide</h3>
+<div class="pb reveal">
+<div class="card"><span class="id">01 · ACQUIS</span><h4>Une équipe déjà organisée</h4><p>La structure des fichiers et l'organisation des dossiers sont bien pensées.</p></div>
+<div class="card"><span class="id">02 · À RATTRAPER</span><h4>Des évolutions en retard dans la librairie</h4><p>Quelques évolutions restent à intégrer dans la librairie Figma.</p></div>
+<div class="card"><span class="id">03 · À AMÉLIORER</span><h4>Un design system solide, une documentation à enrichir</h4><p>Le design system existant est de très bonne qualité ; seule sa documentation est à améliorer.</p></div>
+</div>
+
+<h3 class="sub">Problèmes identifiés</h3>
+<div class="pb n2 reveal">
+<div class="card"><span class="id">P1 · LIVRAISON</span><h4>Un fichier de livraison à améliorer</h4><p>Le fichier Ready to Dev ne donnait pas encore aux développeurs toutes les informations nécessaires pour implémenter les maquettes.</p></div>
+<div class="card"><span class="id">P2 · ACCESSIBILITÉ</span><h4>Des règles fonctionnelles et d'accessibilité absentes</h4><p>Les attributs et rôles HTML, ainsi que les recommandations du RGAA, n'étaient pas intégrés aux composants.</p></div>
+</div>
+
+<h3 class="sub">Enjeu principal</h3>
+<p class="callout wide reveal" style="margin-top:0">Une production la plus réaliste possible, alignée avec les développeurs.</p>
+</section>
+
+<!-- 4. DÉMARCHE -->
+<section class="sec" id="demarche" aria-labelledby="h-dem">
+<div class="sec-head"><p class="k">Démarche</p><h2 class="title" id="h-dem">Valider avant de développer.</h2>
+<p class="lead">Faire valider chaque nouvelle fonctionnalité par le design et la technique, avant même le refinement.</p></div>
+<h3 class="sub" style="margin-top:0">Le circuit d'une nouvelle fonctionnalité — trois étapes ajoutées avant le développement</h3>
+<ol class="steps sprint reveal">
+<li><h4>Concevoir</h4><p>Le designer conçoit la fonctionnalité.</p></li>
+<li class="new"><h4>Design review</h4><span class="badge">Ajouté</span><p>Cohérence avec le design system et règles d'accessibilité.</p></li>
+<li class="new"><h4>Tech review</h4><span class="badge">Ajouté</span><p>Évaluation de la faisabilité.</p></li>
+<li class="new"><h4>Partage avant refinement</h4><span class="badge">Ajouté</span><p>Échanges en amont avec les développeurs.</p></li>
+<li><h4>Refinement et développement</h4><p>Une fonctionnalité déjà discutée et réaliste.</p></li>
+</ol>
+<p class="srcs"><b>Sources des recommandations RGAA</b> · Système de design de l'État (DSFR) · MDN Web Docs (Mozilla)</p>
+
+<h3 class="sub">Un process en 5 étapes pour intégrer un composant au design system</h3>
+<ol class="steps reveal">
+<li><h4>Prioriser</h4><p>Selon la feuille de route.</p></li>
+<li><h4>Inventorier</h4><p>À partir des fichiers de conception de chaque outil (TR-AVO, TR-ADM, POCO, TRC).</p></li>
+<li><h4>Documenter</h4><p>À partir du Système de design de l'État.</p></li>
+<li><h4>Homogénéiser</h4><p>Avec les fondamentaux.</p></li>
+<li><h4>Déployer</h4><p>Publier et partager la librairie.</p></li>
+</ol>
+<figure class="fig reveal" style="margin-top:48px">
+<div class="img"><img src="assets/cas03-03.png" alt="Processus de travail sur le design system en cinq étapes : prioriser, inventorier, documenter, homogénéiser, déployer." loading="lazy" decoding="async"></div>
+<figcaption><h4>Process · Design system en 5 étapes</h4><p>De la feuille de route au déploiement de la librairie, en s'appuyant sur les fichiers de conception de chaque outil.</p></figcaption>
+</figure>
+
+<h3 class="sub">Objectifs</h3>
+<div class="pb n2 reveal">
+<div class="card"><span class="id">OBJECTIF 1</span><h4>Alléger la livraison aux développeurs</h4><p>Réduire l'effort nécessaire pour transmettre les documents aux développeurs (design handoff).</p></div>
+<div class="card"><span class="id">OBJECTIF 2</span><h4>Intégrer l'accessibilité dès la conception</h4><p>Concevoir en tenant compte de l'accessibilité dès les premières maquettes, et non après coup.</p></div>
+</div>
+
+<div class="vol n4 reveal" role="group" aria-label="Volumétrie du design system" style="margin-top:48px">
+<div><span class="num">1</span><p>design system à gérer</p></div>
+<div><span class="num">21</span><p>composants atomes</p></div>
+<div><span class="num">26</span><p>composants molécules</p></div>
+<div><span class="num">Oui</span><p>design tokens · colorimétrie</p></div>
+</div>
+</section>
+
+<!-- 5. DÉCISIONS CLÉS -->
+<section class="sec" id="decisions" aria-labelledby="h-dec">
+<div class="sec-head"><p class="k">Décisions clés</p><h2 class="title" id="h-dec">Trois décisions pour aligner design et développement.</h2>
+<p class="lead">Chaque décision répond à un problème précis et se traduit par une pratique en place à l'issue de la mission.</p></div>
+<div class="decs n3">
+<article class="dec reveal"><header><b>D1</b><h3>Un circuit de validation avant le développement</h3></header>
+<dl>
+<div><dt>Constat</dt><dd>Un fichier Ready to Dev qui ne donnait pas aux développeurs toutes les informations nécessaires.</dd></div>
+<div><dt>Décision</dt><dd>Ajouter une design review et une tech review, et partager les fonctionnalités en amont du refinement pour échanger avec les développeurs.</dd></div>
+<div><dt>Effet</dt><dd class="eff"><span>3 étapes ajoutées</span>une fonctionnalité déjà discutée et réaliste avant le développement.</dd></div>
+</dl></article>
+<article class="dec reveal" data-d="1"><header><b>D2</b><h3>Une documentation qui intègre l'accessibilité</h3></header>
+<dl>
+<div><dt>Constat</dt><dd>Les attributs, rôles HTML et recommandations du RGAA n'étaient pas intégrés aux composants.</dd></div>
+<div><dt>Décision</dt><dd>Documenter chaque composant : états, interactions au clavier, éléments, rôles et attributs HTML, critères RGAA à vérifier, en s'appuyant sur le DSFR et MDN.</dd></div>
+<div><dt>Effet</dt><dd class="eff"><span>RGAA intégré</span>les règles HTML et les recommandations RGAA figurent dans la documentation des composants.</dd></div>
+</dl></article>
+<article class="dec reveal"><header><b>D3</b><h3>Un process commun à tous les designers</h3></header>
+<dl>
+<div><dt>Constat</dt><dd>Un produit, un designer : des évolutions en retard dans la librairie et une documentation à enrichir.</dd></div>
+<div><dt>Décision</dt><dd>Un process de travail en 5 étapes, de la feuille de route au déploiement, pour intégrer chaque composant au design system.</dd></div>
+<div><dt>Effet</dt><dd class="eff"><span>5 designers</span>synchronisés autour d'un design system commun, sur les 5 outils.</dd></div>
+</dl></article>
+</div>
+</section>
+
+<!-- 6. RÉALISATIONS -->
+<section class="sec" id="realisations" aria-labelledby="h-real">
+<div class="sec-head"><p class="k">Réalisations</p><h2 class="title" id="h-real">La documentation et la livraison, concrètement.</h2>
+<p class="lead">Un composant documenté avec ses critères RGAA, et le fichier de livraison aux développeurs.</p></div>
+<div class="shots">
+<figure class="shot reveal"><img src="assets/cas03-realisations-01.jpg" alt="Documentation du composant bouton sans libellé : interactions clavier, éléments et rôles HTML, critères RGAA." loading="lazy" decoding="async"><figcaption>Documentation d'un composant · Bouton sans libellé <span>Clavier, HTML, RGAA</span></figcaption></figure>
+<figure class="shot reveal"><img src="assets/cas03-realisations-07.jpg" alt="Fichier Ready to Dev : fiche d'information sur une user story avec spécifications techniques." loading="lazy" decoding="async"><figcaption>Fichier Ready to Dev <span>Fiche d'information et spécifications</span></figcaption></figure>
+</div>
+<div class="cta-row"><a class="btn btn-primary" href="cas03-realisations.html">Toutes les réalisations →</a></div>
+</section>
+
+<!-- 7. CE QUI A ÉTÉ MIS EN PLACE -->
+<section class="sec" id="resultats" aria-labelledby="h-res">
+<div class="sec-head"><p class="k">Ce qui a été mis en place</p><h2 class="title" id="h-res">Trois pratiques pour une production plus réaliste.</h2>
+<p class="lead">À l'issue de la mission, trois pratiques sont en place, alignées avec les développeurs.</p></div>
+<ol class="benef n3 reveal">
+<li><b>01</b><strong>Un circuit de validation avant le développement</strong>Design review, tech review et partage des fonctionnalités en amont du refinement.</li>
+<li><b>02</b><strong>Une documentation qui intègre l'accessibilité</strong>Les règles HTML (éléments, rôles, attributs) et les recommandations RGAA dans la documentation des composants.</li>
+<li><b>03</b><strong>Un process commun aux designers</strong>Un process de travail en 5 étapes, partagé par les designers des 5 outils.</li>
+</ol>
+
+<h3 class="sub">Ce que j'ai appris</h3>
+<div class="learn reveal">
+<div class="card"><b>01</b><p>Gérer un design system partagé entre 5 designers.</p></div>
+<div class="card"><b>02</b><p>Intégrer l'accessibilité numérique (RGAA) dans la conception.</p></div>
+<div class="card"><b>03</b><p>Tester en amont de la production.</p></div>
+</div>
+</section>
+'''
+out = HEAD.format(title="Conseil d'État", desc="Cas d'étude : refonte graphique de Télérecours pour le Conseil d'État. Un design system partagé par 5 designers, avec une documentation des composants qui intègre le RGAA.", cls="t3") + body + TAIL.replace('{next_title}',"Retour aux trois cas").replace('{next_href}','index.html').replace('{next_cta}','Voir les projets →')
+open('/home/claude/portfolio/cas03.html','w').write(out)
+print(len(out))

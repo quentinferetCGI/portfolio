@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "axe-core": "^4.10.2",
+    "html-validate": "^9.7.1"
+  }
+}
