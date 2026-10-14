@@ -43,6 +43,7 @@ def strip_i18n(src):
     src = re.sub(re.escape(MARK) + r'\n(?:<link rel="alternate" hreflang[^>]*>\n)+', '', src)
     src = re.sub(r'<meta property="og:locale:alternate"[^>]*>\n', '', src)
     src = re.sub(r'\n<a class="lang"[^>]*>[^<]*</a>', '', src)
+    src = re.sub(r'\n<div class="lang-sw".*?</div>(?=\n)', '', src)
     return src
 
 
@@ -52,12 +53,16 @@ def add_links(src, page, lang):
     alt_locale = 'fr_FR' if lang == 'en' else 'en_US'
     src = re.sub(r'(<meta property="og:locale"[^>]*>\n)',
                  lambda m: m.group(1) + f'<meta property="og:locale:alternate" content="{alt_locale}">\n', src, count=1)
+    fr_item = '<a href="{h}" lang="fr" hreflang="fr" data-umami-event="langue-fr">FR<span class="sr-only"> – Français</span></a>'
+    en_item = '<a href="{h}" lang="en" hreflang="en" data-umami-event="langue-en">EN<span class="sr-only"> – English</span></a>'
     if lang == 'fr':
-        switch = (f'<a class="lang" href="en/{page}" hreflang="en" lang="en" '
-                  f'data-umami-event="langue-en">English</a>')
+        items = ('<span aria-current="true" lang="fr">FR<span class="sr-only"> – Français</span></span>'
+                 + en_item.format(h='en/' + page))
+        label = 'Langue'
     else:
-        switch = (f'<a class="lang" href="../{page}" hreflang="fr" lang="fr" '
-                  f'data-umami-event="langue-fr">Français</a>')
+        items = fr_item.format(h='../' + page) + '<span aria-current="true" lang="en">EN<span class="sr-only"> – English</span></span>'
+        label = 'Language'
+    switch = f'<div class="lang-sw" role="group" aria-label="{label}">{items}</div>'
     src = re.sub(r'(<nav class="nav"[^>]*>.*?)(\n</nav>)', lambda m: m.group(1) + '\n' + switch + m.group(2),
                  src, count=1, flags=re.S)
     return src
