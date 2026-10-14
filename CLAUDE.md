@@ -4,7 +4,7 @@ Ce fichier décrit tout ce qui a été construit sur ce projet, pour le refaire 
 
 ## 1. Le projet en une phrase
 
-Site statique (HTML + CSS + un peu de JS, sans build, sans framework) publié sur GitHub Pages : une page d'accueil, une page À propos, 3 cas d'étude (chacun avec résumé et galeries), une déclaration d'accessibilité et un plan du site. 14 pages en français.
+Site statique (HTML + CSS + un peu de JS, sans build, sans framework) publié sur GitHub Pages : une page d'accueil, une page À propos, 3 cas d'étude (chacun avec résumé et galeries), une déclaration d'accessibilité et un plan du site. 14 pages en français, et leur version anglaise dans `en/` (voir §13).
 
 - Dépôt : `/home/claude/portfolio`, branche `main`, publié sur `https://quentinferetcgi.github.io/portfolio/`.
 - Langue de travail et de tous les livrables : **français**. Typographie française (espaces insécables avant `:`, `%`, guillemets « »).
@@ -136,3 +136,12 @@ Décisions prises sur ce projet (à reconfirmer à chaque nouveau projet) :
 5. Lancer l'audit (`tools/audit`), corriger jusqu'à 0 violation axe et 0 erreur html-validate, vérifier 200 %/400 % et l'espacement du texte.
 6. Rédiger la déclaration selon le modèle officiel avec **l'état réel** ; proposer un vrai audit RGAA et un test lecteur d'écran avant toute mention de conformité.
 7. Générer les PDF si demandés (liens avec UTM), fusionner dans `main`, pousser, vérifier la page en ligne.
+
+## 13. Version anglaise (`en/`)
+
+- `en/` contient les 14 pages en anglais, mêmes noms de fichiers. **Ne pas les modifier à la main** : elles sont générées depuis les pages françaises.
+- Chaîne : `tools/i18n/segment.py` découpe chaque page en segments (contenu des éléments de texte + attributs `alt`, `aria-label`, `title`, meta description/og) repérés par position ; `tools/i18n/src/_index.json` associe chaque texte source à un identifiant ; `tools/i18n/en/<page>.json` contient les traductions (identifiant → HTML anglais, balises internes conservées). Un identifiant absent garde le texte source (noms propres, outils).
+- Régénérer après toute modification : `python3 tools/i18n/apply.py` (idempotent). Le script écrit `en/*.html` (`lang="en"`, `../assets/`, `canonical` et `og:url` en `/en/`, `og:locale` en_US) et ajoute aux deux langues les liens `hreflang` fr/en/x-default (bloc `<!-- i18n -->`), `og:locale:alternate` et le sélecteur de langue FR | EN (`div.lang-sw role="group"` en fin de `nav.nav`, langue active en `span[aria-current]`, nom accessible « FR – Français » / « EN – English », événements Umami `langue-en` / `langue-fr`).
+- Modifier un texte français : mettre à jour la clé correspondante dans `_index.json` (ou réexporter) et sa traduction, sinon le segment reste en français dans `en/`. Vérifier avec une recherche de mots français dans `en/`.
+- Choix de traduction : anglais américain, ton consulting ; « Projets » → Work, « Réalisations » → Deliverables, « cas d'étude » → case study ; organismes français explicités à la première mention (Conseil d'État = France's supreme administrative court, RGAA = France's official accessibility standard based on WCAG) ; liens vers des contenus français signalés « (in French) ».
+- Les visuels (captures Figma, écrans) restent en français ; leur `alt` est traduit.
