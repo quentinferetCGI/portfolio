@@ -82,7 +82,7 @@ a{color:var(--accent-ink)}
 .brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:16px;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
 .brand .mono{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--ink);color:#fff;font-size:13px;font-weight:700;letter-spacing:0}
 .brand small{font-weight:400;color:var(--ink-3);font-size:14px}
-.nav{display:flex;gap:28px;font-size:15px}
+.nav{display:flex;flex-wrap:wrap;gap:4px 28px;font-size:15px}
 .nav a{color:var(--ink-2);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
 .nav a:hover,.nav a[aria-current]{color:var(--ink);border-bottom-color:var(--ink)}
 .site-footer{border-top:1px solid var(--line);margin-top:var(--section)}

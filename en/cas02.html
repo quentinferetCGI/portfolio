@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Île-de-France Mobilités — Case Study · Quentin Féret</title>
+<meta name="description" content="Case study: building a cross-platform design system for the ticketing modernization program of Île-de-France Mobilités, the Paris region transit authority. Design production dropped from 80% to 20% of the time.">
+<meta name="theme-color" content="#FAFAF8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%230E0F12%22/%3E%3Ctext x=%2232%22 y=%2242%22 font-family=%22Helvetica,Arial%22 font-size=%2226%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22%3EQF%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../assets/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/case.css">
+<script>document.documentElement.classList.add('js')</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="4f2ae9d7-1726-47b2-a085-174438b8aec9"></script>
+<link rel="canonical" href="https://quentinferetcgi.github.io/portfolio/en/cas02.html">
+<!-- i18n -->
+<link rel="alternate" hreflang="fr" href="https://quentinferetcgi.github.io/portfolio/cas02.html">
+<link rel="alternate" hreflang="en" href="https://quentinferetcgi.github.io/portfolio/en/cas02.html">
+<link rel="alternate" hreflang="x-default" href="https://quentinferetcgi.github.io/portfolio/cas02.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:site_name" content="Quentin Féret — Portfolio">
+<meta property="og:title" content="Île-de-France Mobilités — Case Study · Quentin Féret">
+<meta property="og:description" content="Case study: building a cross-platform design system for the ticketing modernization program of Île-de-France Mobilités, the Paris region transit authority. Design production dropped from 80% to 20% of the time.">
+<meta property="og:url" content="https://quentinferetcgi.github.io/portfolio/en/cas02.html">
+</head>
+<body class="t2">
+<a class="skip" href="#contenu">Skip to content</a>
+
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="index.html"><span class="mono" aria-hidden="true">QF</span><span>Quentin Féret <small>— UX/UI Designer</small></span></a>
+<nav class="nav" aria-label="Main navigation">
+<a href="index.html" aria-current="page">Work</a>
+<a href="apropos.html">About</a>
+<a href="https://www.linkedin.com/in/quentin-feret" target="_blank" rel="noopener" data-umami-event="contact-linkedin">Contact<span class="sr-only"> (opens in a new tab)</span></a>
+<a class="lang" href="../cas02.html" hreflang="fr" lang="fr" data-umami-event="langue-fr">Français</a>
+</nav>
+</div>
+</header>
+
+<main id="contenu">
+
+<!-- 1. EN-TÊTE -->
+<section class="ch" aria-labelledby="h1">
+<div class="wrap">
+<p class="crumb"><a href="index.html">Work</a> / Case study 02</p>
+<div class="ch-top">
+<div>
+<p class="eyebrow" style="margin-bottom:16px">UX/UI × Design system</p>
+<h1 class="display" id="h1">Île-de-France Mobilités</h1>
+<p class="lead">Running 12 design workstreams in parallel and building a cross-platform design system shared by 3 design teams and 3 development teams.</p>
+<ul class="tags"><li>Ticketing</li><li>Design system</li><li>Cross-platform</li></ul>
+</div>
+<div class="kpi-hero" role="group" aria-label="Key result">
+<span class="label">Key result</span>
+<span class="big num">80 → 20%</span>
+<p>of time spent on design production, reinvested in discovery, testing, delivery and maintenance.</p>
+</div>
+</div>
+<dl class="meta m4">
+<div><dt>Client</dt><dd>Île-de-France Mobilités</dd></div>
+<div><dt>Role</dt><dd>UX/UI Designer</dd></div>
+<div><dt>Timeline</dt><dd>Sept 2023 – May 2025</dd></div>
+<div><dt>Tools</dt><dd>Figma</dd></div>
+</dl>
+<p class="team"><b>Team</b> · Ticketing modernization program, with the Digital Department and partner firms PwC, CGI, MC2i, Ingé-Stif, Monetech, Apple and Google</p>
+<div class="cover"><img src="../assets/index-02.jpg" alt="Preview of the Île-de-France Mobilités design system." width="2400" height="1350"></div>
+</div>
+</section>
+
+<nav class="snav" aria-label="Case study contents">
+<ul>
+<li><a href="#tldr"><b>01</b>TL;DR</a></li>
+<li><a href="#contexte"><b>02</b>Context &amp; challenge</a></li>
+<li><a href="#demarche"><b>03</b>Approach</a></li>
+<li><a href="#decisions"><b>04</b>Key decisions</a></li>
+<li><a href="#realisations"><b>05</b>Deliverables</a></li>
+<li><a href="#resultats"><b>06</b>Results &amp; impact</a></li>
+</ul>
+</nav>
+
+<div class="wrap">
+
+<!-- 2. TL;DR -->
+<section class="sec" id="tldr" aria-labelledby="h-tldr" style="padding-top:64px">
+<div class="sec-head"><p class="k">TL;DR</p><h2 class="title" id="h-tldr">The problem, my decision, the impact.</h2></div>
+<div class="tldr reveal">
+<div><h3>Problem</h3><p>12 interdependent features designed with no brand guidelines or design system, in separate files, handed off as PNGs.</p></div>
+<div><h3>Decision</h3><p>An end-to-end connected design system, from foundations to page templates, and a new file organization.</p></div>
+<div><h3>Impact</h3><p>Design production dropped from 80% to 20% of the time, and a design system shared across all IDFM products was launched.</p></div>
+</div>
+</section>
+
+<!-- 3. CONTEXTE & ENJEU -->
+<section class="sec" id="contexte" aria-labelledby="h-ctx">
+<div class="sec-head"><p class="k">Context &amp; challenge</p><h2 class="title" id="h-ctx">Independent stakeholders, before a design team was in place.</h2></div>
+<div class="prose reveal">
+<p>As a designer on the ticketing modernization program (PMB), I worked on the user journeys of 12 interdependent features, alongside several teams each working in their own files, some dating back to 2019.</p>
+<p>At IDFM, the project had been launched with several independent stakeholders before a design team came on board. Project managers and stakeholders had started designing mockups without relying on IDFM's brand guidelines, which did not exist at the time, or on the platform conventions of each technology.</p>
+</div>
+
+<h3 class="sub">Scope — Android · iOS · Web · 7 features</h3>
+<div class="scope reveal">
+<div class="card"><h3>Transit pass</h3><ul><li>Navigo Liberté+ — new transit pass</li></ul></div>
+<div class="card"><h3>Service</h3><ul><li>Annual Navigo pass on smartphone — new service</li></ul></div>
+<div class="card"><h3>Purchase</h3><ul><li>Buying a digital ticket</li></ul></div>
+<div class="card"><h3>After-sales</h3><ul><li>After-sales service</li></ul></div>
+<div class="card"><h3>Account</h3><ul><li>Personal account area</li><li>Account creation and management</li></ul></div>
+<div class="card"><h3>Mobility</h3><ul><li>Alternative mobility services</li></ul></div>
+</div>
+<figure class="fig reveal">
+<div class="img"><img src="../assets/cas02-01.jpg" alt="Navigo Liberté+: the same journey adapted for Android, iOS and the web, on desktop and mobile." loading="lazy" decoding="async"></div>
+<figcaption><h3>Example · Navigo Liberté+</h3><p>The same journey adapted for Android, iOS and the web, on desktop and mobile.</p></figcaption>
+</figure>
+
+<h3 class="sub">Starting point — three facts when I joined</h3>
+<div class="stats3 reveal">
+<div class="stat"><span class="num">01</span><h3>A product out of sync with the mockups</h3></div>
+<div class="stat"><span class="num">02</span><h3>No existing design system</h3></div>
+<div class="stat"><span class="num">03</span><h3>Designs not suited to development</h3></div>
+</div>
+
+<h3 class="sub">Key issues</h3>
+<div class="pb reveal">
+<div class="card"><span class="id">P1 · PRODUCTION</span><h3>Production out of sync with the mockups</h3><p>Mockups had been designed without accounting for the functional specifications of each platform or IDFM's digital brand guidelines.</p></div>
+<div class="card"><span class="id">P2 · FILES</span><h3>No file organization</h3><p>Time was spent hunting for mockups and figuring out how screens connected.</p></div>
+<div class="card"><span class="id">P3 · HANDOFF</span><h3>A painful handoff to developers</h3><p>Mockups were delivered as PNG files, so developers' inspection tools could not work.</p></div>
+</div>
+</section>
+
+<!-- 4. DÉMARCHE -->
+<section class="sec" id="demarche" aria-labelledby="h-dem">
+<div class="sec-head"><p class="k">Approach</p><h2 class="title" id="h-dem">Four challenges, one end-to-end connected system.</h2>
+<p class="lead">Help structure a cross-platform design system serving multiple features across the Île-de-France Mobilités ecosystem.</p></div>
+<ol class="steps n4 reveal">
+<li><h3>Consolidate existing assets</h3><p>Identify what can be shared and reused from one feature to the next.</p></li>
+<li><h3>Ensure consistency</h3><p>Structure changes around the specifics of web, Android and iOS.</p></li>
+<li><h3>Streamline handoff</h3><p>Make functional specifications clear for engineering teams.</p></li>
+<li><h3>Build in accessibility</h3><p>Account for RGAA, RAAM and audit findings on features under development.</p></li>
+</ol>
+
+<h3 class="sub">Architecture — before and now</h3>
+<div class="lvl reveal">
+<div class="row"><span>Before<small>disconnected elements</small></span>
+<div class="c off"><b>01 Foundations</b>Disconnected from components</div>
+<div class="c"><b>02 Atoms</b>Existing components in production</div>
+<div class="c off"><b>03 Molecules</b>Nonexistent</div>
+<div class="c off"><b>04 Pages</b>Nonexistent</div></div>
+<div class="row"><span>Now<small>an end-to-end connected system</small></span>
+<div class="c hl"><b>01 Foundations</b>IDFM's digital brand guidelines translated for product design</div>
+<div class="c hl"><b>02 Atoms</b>iOS and Android libraries, refactored production components</div>
+<div class="c hl"><b>03 Molecules</b>Key features consolidated and documented<span class="tag">New</span></div>
+<div class="c hl"><b>04 Pages</b>Design pattern templates for each platform<span class="tag">New</span></div></div>
+<p class="gapnote">Foundations reconnected to atoms · two new levels created: molecules and pages.</p>
+</div>
+<div class="vol n4 reveal" role="group" aria-label="Design system scope">
+<div><span class="num">1</span><p>design system managed</p></div>
+<div><span class="num">63</span><p>atom components</p></div>
+<div><span class="num">75</span><p>molecule components</p></div>
+<div><span class="num">180</span><p>page components</p></div>
+</div>
+<p class="srcs"><b>Design tokens</b> · colors, responsive and mockups.</p>
+</section>
+
+<!-- 5. DÉCISIONS CLÉS -->
+<section class="sec" id="decisions" aria-labelledby="h-dec">
+<div class="sec-head"><p class="k">Key decisions</p><h2 class="title" id="h-dec">Four decisions to move from mockups to a system.</h2>
+<p class="lead">Each decision addresses a specific finding and leads to a measurable outcome.</p></div>
+<div class="decs">
+<article class="dec reveal"><header><b>D1</b><h3>Connect foundations to components</h3></header>
+<dl>
+<div><dt>Finding</dt><dd>No design system, and no IDFM digital brand guidelines when the project started.</dd></div>
+<div><dt>Decision</dt><dd>Translate the brand guidelines into foundations, create the iOS and Android libraries, refactor production components, and build the molecule and page levels.</dd></div>
+<div><dt>Impact</dt><dd class="eff"><span>+2 levels</span>an end-to-end connected system, from foundations to page templates.</dd></div>
+</dl></article>
+<article class="dec reveal" data-d="1"><header><b>D2</b><h3>Reorganize the file structure</h3></header>
+<dl>
+<div><dt>Finding</dt><dd>No organization: time was lost looking for mockups.</dd></div>
+<div><dt>Decision</dt><dd>A new folder structure built around key files to document, test, share and build.</dd></div>
+<div><dt>Impact</dt><dd class="eff"><span>Fewer files</span>design effort is synchronized across all features to be delivered.</dd></div>
+</dl></article>
+<article class="dec reveal"><header><b>D3</b><h3>Hand off a format developers can use</h3></header>
+<dl>
+<div><dt>Finding</dt><dd>Mockups delivered as PNGs: inspection tools did not work.</dd></div>
+<div><dt>Decision</dt><dd>Improve deliverables and handoff information for faithful implementation, with components analyzed by state and variant.</dd></div>
+<div><dt>Impact</dt><dd class="eff"><span>0 → 30%</span>of time spent on handoff.</dd></div>
+</dl></article>
+<article class="dec reveal" data-d="1"><header><b>D4</b><h3>Drive adoption of new methods by showing, not telling</h3></header>
+<dl>
+<div><dt>Finding</dt><dd>Varied design profiles spread across multiple teams.</dd></div>
+<div><dt>Decision</dt><dd>Tailored coaching for each person, plus demos and interactive prototypes for management, with active listening to their needs.</dd></div>
+<div><dt>Impact</dt><dd class="eff"><span>Cross-team project</span>a design system shared across all IDFM-branded products was launched.</dd></div>
+</dl></article>
+</div>
+<figure class="fig reveal" style="margin-top:40px">
+<div class="img"><img src="../assets/cas02-02.png" alt="New organization of the IDFM Ticketing folder around key files." loading="lazy" decoding="async"></div>
+<figcaption><h3>Organization · IDFM Ticketing folder</h3><p>Key files to document, test, share and build made it possible to synchronize design effort across all features to be delivered, and to reduce the number of files to manage.</p></figcaption>
+</figure>
+
+<h3 class="sub">The groundwork behind these decisions</h3>
+<div class="more reveal">
+<div class="card"><h3>Foundations &amp; tokens</h3><ul><li>Explaining how visual foundations are organized</li><li>Making the client's digital brand guidelines accessible to every team</li></ul></div>
+<div class="card"><h3>Libraries &amp; handoff</h3><ul><li>Analysis of component logic, states and variants</li><li>Improved deliverables and handoff information for developers</li></ul></div>
+<div class="card"><h3>Accessibility</h3><ul><li>Accounting for RGAA, RAAM and accessibility audit findings on features under development</li></ul></div>
+</div>
+</section>
+
+<!-- 6. RÉALISATIONS -->
+<section class="sec" id="realisations" aria-labelledby="h-real">
+<div class="sec-head"><p class="k">Deliverables</p><h2 class="title" id="h-real">From user journey to documented component.</h2>
+<p class="lead">A look at the deliverables: product pages, component documentation and journey mapping.</p></div>
+<div class="shots">
+<figure class="shot reveal"><img src="../assets/cas02-realisations-10.png" alt="Navigo Liberté+ landing page on mobile and desktop." loading="lazy" decoding="async"><figcaption>Landing page · Navigo Liberté+ <span>Mobile and desktop</span></figcaption></figure>
+<figure class="shot reveal"><img src="../assets/cas02-realisations-09.png" alt="Text input component documentation, by platform." loading="lazy" decoding="async"><figcaption>Component documentation · Text input <span>Desktop, iOS, Android</span></figcaption></figure>
+<figure class="shot reveal"><img src="../assets/cas02-realisations-06.jpg" alt="Journey mapping, before and now." loading="lazy" decoding="async"><figcaption>Journey mapping <span>Before / Now</span></figcaption></figure>
+</div>
+<div class="cta-row"><a class="btn btn-primary" href="cas02-realisations.html">All deliverables →</a></div>
+</section>
+
+<!-- 7. RÉSULTATS -->
+<section class="sec" id="resultats" aria-labelledby="h-res">
+<div class="sec-head"><p class="k">Results &amp; impact</p><h2 class="title" id="h-res">Design production dropped from 80% to 20% of the time.</h2>
+<p class="lead">The time freed up is reinvested in discovery, testing, delivery and maintenance.</p></div>
+<div class="ba reveal" role="group" aria-label="Time allocation by phase, before and now">
+<div class="row"><span>Before<small>previous organization</small></span>
+<div class="bar"><i class="p-rec" style="width:20%">20%</i><i class="p-con" style="width:80%">80%</i></div></div>
+<div class="row"><span>Now<small>new organization</small></span>
+<div class="bar"><i class="p-cad" style="width:10%">10%</i><i class="p-rec" style="width:20%">20%</i><i class="p-con" style="width:20%">20%</i><i class="p-tes" style="width:10%">10%</i><i class="p-liv" style="width:30%">30%</i><i class="p-mai" style="width:10%">10%</i></div></div>
+<ul class="legend"><li><i class="p-cad"></i>Scope</li><li><i class="p-rec"></i>Research</li><li><i class="p-con"></i>Design</li><li><i class="p-tes"></i>Test</li><li><i class="p-liv"></i>Deliver</li><li><i class="p-mai"></i>Maintain</li></ul>
+</div>
+<div class="deltas reveal" role="group" aria-label="Change by phase">
+<div><span>Scope</span><b>0 → 10%</b></div>
+<div><span>Research</span><b>20 → 20%</b></div>
+<div class="hl"><span>Design</span><b>80 → 20%</b></div>
+<div><span>Test</span><b>0 → 10%</b></div>
+<div><span>Deliver</span><b>0 → 30%</b></div>
+<div><span>Maintain</span><b>0 → 10%</b></div>
+</div>
+
+<h3 class="sub">Observed results</h3>
+<ol class="benef n3 reveal">
+<li><b>01</b>Faster production of design deliverables</li>
+<li><b>02</b>An iterative delivery cycle in place</li>
+<li><b>03</b>Launch of a cross-team project: a design system shared across all IDFM-branded products</li>
+</ol>
+
+<h3 class="sub">What I learned</h3>
+<div class="learn reveal">
+<div class="card"><b>01</b><p>Designing for Android and iOS, on top of the web.</p></div>
+<div class="card"><b>02</b><p>Coordinating work on 12 features in parallel.</p></div>
+<div class="card"><b>03</b><p>Building a cross-platform design system.</p></div>
+</div>
+</section>
+
+<aside class="next reveal" aria-label="Next case study">
+<h2>Next case: Conseil d'État</h2>
+<a class="btn" data-umami-event="cas-complet" href="cas03-resume.html">Read the case study →</a>
+</aside>
+
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="wrap"><span>Quentin Féret · Portfolio <small>Anonymous, cookie-free visitor analytics</small></span>
+<nav class="foot-nav" aria-label="Footer"><ul>
+<li><a href="accessibilite.html">Accessibility: not assessed</a></li>
+<li><a href="plan-du-site.html">Sitemap</a></li>
+<li><a href="https://www.linkedin.com/in/quentin-feret" target="_blank" rel="noopener" data-umami-event="contact-linkedin">Get in touch on LinkedIn →<span class="sr-only"> (opens in a new tab)</span></a></li>
+</ul></nav></div>
+</footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+    var links=[].slice.call(document.querySelectorAll('.snav a'));
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on')});map[e.target.id].classList.add('on')}})},{rootMargin:'-30% 0px -60% 0px'});
+    Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)so.observe(s)});
+  }else{els.forEach(function(e){e.classList.add('in')})}
+})();
+</script>
+</body>
+</html>

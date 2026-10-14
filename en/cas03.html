@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conseil d'État — Case Study · Quentin Féret</title>
+<meta name="description" content="Case study: visual redesign of Télérecours for the Conseil d'État, France's supreme administrative court. A design system shared by 5 designers, with component documentation that builds in RGAA accessibility.">
+<meta name="theme-color" content="#FAFAF8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%230E0F12%22/%3E%3Ctext x=%2232%22 y=%2242%22 font-family=%22Helvetica,Arial%22 font-size=%2226%22 font-weight=%22700%22 fill=%22white%22 text-anchor=%22middle%22%3EQF%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="../assets/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/case.css">
+<script>document.documentElement.classList.add('js')</script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="4f2ae9d7-1726-47b2-a085-174438b8aec9"></script>
+<link rel="canonical" href="https://quentinferetcgi.github.io/portfolio/en/cas03.html">
+<!-- i18n -->
+<link rel="alternate" hreflang="fr" href="https://quentinferetcgi.github.io/portfolio/cas03.html">
+<link rel="alternate" hreflang="en" href="https://quentinferetcgi.github.io/portfolio/en/cas03.html">
+<link rel="alternate" hreflang="x-default" href="https://quentinferetcgi.github.io/portfolio/cas03.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:site_name" content="Quentin Féret — Portfolio">
+<meta property="og:title" content="Conseil d'État — Case Study · Quentin Féret">
+<meta property="og:description" content="Case study: visual redesign of Télérecours for the Conseil d'État, France's supreme administrative court. A design system shared by 5 designers, with component documentation that builds in RGAA accessibility.">
+<meta property="og:url" content="https://quentinferetcgi.github.io/portfolio/en/cas03.html">
+</head>
+<body class="t3">
+<a class="skip" href="#contenu">Skip to content</a>
+
+<header class="site-header">
+<div class="wrap">
+<a class="brand" href="index.html"><span class="mono" aria-hidden="true">QF</span><span>Quentin Féret <small>— UX/UI Designer</small></span></a>
+<nav class="nav" aria-label="Main navigation">
+<a href="index.html" aria-current="page">Work</a>
+<a href="apropos.html">About</a>
+<a href="https://www.linkedin.com/in/quentin-feret" target="_blank" rel="noopener" data-umami-event="contact-linkedin">Contact<span class="sr-only"> (opens in a new tab)</span></a>
+<a class="lang" href="../cas03.html" hreflang="fr" lang="fr" data-umami-event="langue-fr">Français</a>
+</nav>
+</div>
+</header>
+
+<main id="contenu">
+
+<!-- 1. EN-TÊTE -->
+<section class="ch" aria-labelledby="h1">
+<div class="wrap">
+<p class="crumb"><a href="index.html">Work</a> / Case study 03</p>
+<div class="ch-top">
+<div>
+<p class="eyebrow" style="margin-bottom:16px">UX/UI × Design system</p>
+<h1 class="display" id="h1">Conseil d'État</h1>
+<p class="lead">Aligning 5 designers around a shared design system, and building in accessibility from the start for the visual redesign of Télérecours.</p>
+<ul class="tags"><li>Visual redesign</li><li>Design system</li><li>Public service</li></ul>
+</div>
+<div class="kpi-hero" role="group" aria-label="Key figure">
+<span class="label">Scope</span>
+<span class="big num sm">5&nbsp;tools<br>5&nbsp;designers</span>
+<p>The designers of the Télérecours tools, aligned around a shared design system.</p>
+</div>
+</div>
+<dl class="meta">
+<div><dt>Client</dt><dd>Conseil d'État</dd></div>
+<div><dt>Role</dt><dd>UX/UI Designer</dd></div>
+<div><dt>Timeline</dt><dd>Feb 2022 – Aug 2023</dd></div>
+<div><dt>Team</dt><dd>CGI and the Conseil d'État IT department</dd></div>
+<div><dt>Tools</dt><dd>Figma</dd></div>
+</dl>
+<div class="cover"><img src="../assets/index-03.jpg" alt="UI Kit V2.0 design system for the Conseil d'État Télérecours services: buttons, dropdown, checkboxes, text inputs, date picker, file upload." width="2400" height="1350"></div>
+</div>
+</section>
+
+<nav class="snav" aria-label="Case study contents">
+<ul>
+<li><a href="#tldr"><b>01</b>TL;DR</a></li>
+<li><a href="#contexte"><b>02</b>Context &amp; challenge</a></li>
+<li><a href="#demarche"><b>03</b>Approach</a></li>
+<li><a href="#decisions"><b>04</b>Key decisions</a></li>
+<li><a href="#realisations"><b>05</b>Deliverables</a></li>
+<li><a href="#resultats"><b>06</b>What was put in place</a></li>
+</ul>
+</nav>
+
+<div class="wrap">
+
+<!-- 2. TL;DR -->
+<section class="sec" id="tldr" aria-labelledby="h-tldr" style="padding-top:64px">
+<div class="sec-head"><p class="k">TL;DR</p><h2 class="title" id="h-tldr">The problem, my decision, the impact.</h2></div>
+<div class="tldr reveal">
+<div><h3>Problem</h3><p>An incomplete handoff file, and HTML and accessibility rules missing from the design system.</p></div>
+<div><h3>Decision</h3><p>A validation workflow before development, and component documentation that builds in RGAA.</p></div>
+<div><h3>Impact</h3><p>More realistic delivery, aligned with developers, and a 5-step process shared across 5 tools.</p></div>
+</div>
+</section>
+
+<!-- 3. CONTEXTE & ENJEU -->
+<section class="sec" id="contexte" aria-labelledby="h-ctx">
+<div class="sec-head"><p class="k">Context &amp; challenge</p><h2 class="title" id="h-ctx">One product per designer, one system to share.</h2></div>
+<div class="prose reveal">
+<p>The Télérecours e-filing platform underwent a visual redesign. User research was launched alongside it to improve existing features. Each product had its own designer, responsible for its interface.</p>
+<p><strong style="color:var(--ink)">My role:</strong> support each designer, synchronize changes across products, centralize them in a library and share it with all designers.</p>
+</div>
+<figure class="fig reveal">
+<div class="img"><img src="../assets/cas03-01.jpg" alt="Télérecours before / after: the former appeals list, then the new Litigation Portal with tabs, status filters and a cleaner table." loading="lazy" decoding="async"></div>
+<figcaption><h3>Before / after · Appeals list</h3><p>From the former Télérecours to the new Litigation Portal: the same appeals list, visually redesigned.</p></figcaption>
+</figure>
+
+<h3 class="sub">Scope — the 5 Télérecours tools</h3>
+<div class="scope reveal">
+<div class="card"><h3>Télérecours for citizens</h3><ul><li>Redesign · a more accessible, more usable application</li></ul></div>
+<div class="card"><h3>Télérecours for lawyers</h3><ul><li>Redesign · aligned with new usage patterns</li></ul></div>
+<div class="card"><h3>Télérecours for government agencies</h3><ul><li>New design · a Télérecours tailored for government agencies</li></ul></div>
+<div class="card"><h3>Litigation Portal</h3><ul><li>Redesign and merger · two tools combined into a single application</li></ul></div>
+<div class="card"><h3>Judges directory</h3><ul><li>New design · a directory for administrative judges</li></ul></div>
+</div>
+<figure class="fig reveal">
+<div class="img"><img src="../assets/cas03-02.jpg" alt="The appeals list across four tools: POCO, TR-ADM, TR-AVO and TRC, each with a different information architecture." loading="lazy" decoding="async"></div>
+<figcaption><h3>One feature, four architectures</h3><p>The appeals list varies with the needs of each tool's project managers and users: POCO, TR-ADM, TR-AVO and TRC.</p></figcaption>
+</figure>
+
+<h3 class="sub">Starting point — an already solid foundation</h3>
+<div class="pb reveal">
+<div class="card"><span class="id">01 · STRENGTHS</span><h3>An already organized team</h3><p>File structure and folder organization were well thought out.</p></div>
+<div class="card"><span class="id">02 · CATCH-UP NEEDED</span><h3>Changes lagging behind in the library</h3><p>A few changes still needed to be integrated into the Figma library.</p></div>
+<div class="card"><span class="id">03 · ROOM FOR IMPROVEMENT</span><h3>A solid design system, documentation to strengthen</h3><p>The existing design system was of very high quality; only its documentation needed improvement.</p></div>
+</div>
+
+<h3 class="sub">Key issues</h3>
+<div class="pb n2 reveal">
+<div class="card"><span class="id">P1 · HANDOFF</span><h3>A handoff file to improve</h3><p>The Ready to Dev file did not yet give developers all the information they needed to implement the mockups.</p></div>
+<div class="card"><span class="id">P2 · ACCESSIBILITY</span><h3>Missing functional and accessibility rules</h3><p>HTML attributes and roles, as well as RGAA recommendations, were not built into the components.</p></div>
+</div>
+
+<h3 class="sub">Main challenge</h3>
+<p class="callout wide reveal" style="margin-top:0">Delivery that is as realistic as possible, aligned with developers.</p>
+</section>
+
+<!-- 4. DÉMARCHE -->
+<section class="sec" id="demarche" aria-labelledby="h-dem">
+<div class="sec-head"><p class="k">Approach</p><h2 class="title" id="h-dem">Validate before building.</h2>
+<p class="lead">Have every new feature validated by design and engineering, even before refinement.</p></div>
+<h3 class="sub" style="margin-top:0">The workflow for a new feature — three steps added before development</h3>
+<ol class="steps sprint reveal">
+<li><h3>Design</h3><p>The designer designs the feature.</p></li>
+<li class="new"><h3>Design review</h3><span class="badge">Added</span><p>Consistency with the design system and accessibility rules.</p></li>
+<li class="new"><h3>Tech review</h3><span class="badge">Added</span><p>Feasibility assessment.</p></li>
+<li class="new"><h3>Sharing before refinement</h3><span class="badge">Added</span><p>Early discussions with developers.</p></li>
+<li><h3>Refinement and development</h3><p>A feature that has already been discussed and is realistic.</p></li>
+</ol>
+<p class="srcs"><b>Sources for RGAA recommendations</b> · French Government Design System (DSFR) · MDN Web Docs (Mozilla)</p>
+
+<h3 class="sub">A 5-step process to add a component to the design system</h3>
+<ol class="steps reveal">
+<li><h3>Prioritize</h3><p>Based on the roadmap.</p></li>
+<li><h3>Inventory</h3><p>From each tool's design files (TR-AVO, TR-ADM, POCO, TRC).</p></li>
+<li><h3>Document</h3><p>Based on the French Government Design System.</p></li>
+<li><h3>Harmonize</h3><p>With the foundations.</p></li>
+<li><h3>Deploy</h3><p>Publish and share the library.</p></li>
+</ol>
+<figure class="fig reveal" style="margin-top:48px">
+<div class="img"><img src="../assets/cas03-03.png" alt="Five-step design system workflow: prioritize, inventory, document, harmonize, deploy." loading="lazy" decoding="async"></div>
+<figcaption><h3>Process · 5-step design system workflow</h3><p>From roadmap to library deployment, building on each tool's design files.</p></figcaption>
+</figure>
+
+<h3 class="sub">Objectives</h3>
+<div class="pb n2 reveal">
+<div class="card"><span class="id">OBJECTIVE 1</span><h3>Streamline handoff to developers</h3><p>Reduce the effort needed to hand off documents to developers (design handoff).</p></div>
+<div class="card"><span class="id">OBJECTIVE 2</span><h3>Build accessibility in from the start</h3><p>Design with accessibility in mind from the very first mockups, not as an afterthought.</p></div>
+</div>
+
+<div class="vol n4 reveal" role="group" aria-label="Design system scope" style="margin-top:48px">
+<div><span class="num">1</span><p>design system managed</p></div>
+<div><span class="num">21</span><p>atom components</p></div>
+<div><span class="num">26</span><p>molecule components</p></div>
+<div><span class="num">Yes</span><p>design tokens · color system</p></div>
+</div>
+</section>
+
+<!-- 5. DÉCISIONS CLÉS -->
+<section class="sec" id="decisions" aria-labelledby="h-dec">
+<div class="sec-head"><p class="k">Key decisions</p><h2 class="title" id="h-dec">Three decisions to align design and development.</h2>
+<p class="lead">Each decision addresses a specific problem and results in a practice still in place at the end of the engagement.</p></div>
+<div class="decs n3">
+<article class="dec reveal"><header><b>D1</b><h3>A validation workflow before development</h3></header>
+<dl>
+<div><dt>Finding</dt><dd>A Ready to Dev file that did not give developers all the information they needed.</dd></div>
+<div><dt>Decision</dt><dd>Add a design review and a tech review, and share features ahead of refinement to discuss them with developers.</dd></div>
+<div><dt>Impact</dt><dd class="eff"><span>3 steps added</span>a feature already discussed and realistic before development.</dd></div>
+</dl></article>
+<article class="dec reveal" data-d="1"><header><b>D2</b><h3>Documentation with accessibility built in</h3></header>
+<dl>
+<div><dt>Finding</dt><dd>HTML attributes, roles and RGAA recommendations were not built into the components.</dd></div>
+<div><dt>Decision</dt><dd>Document every component: states, keyboard interactions, HTML elements, roles and attributes, RGAA criteria to check, based on the DSFR and MDN.</dd></div>
+<div><dt>Impact</dt><dd class="eff"><span>RGAA built in</span>HTML rules and RGAA recommendations are part of the component documentation.</dd></div>
+</dl></article>
+<article class="dec reveal"><header><b>D3</b><h3>A shared process for all designers</h3></header>
+<dl>
+<div><dt>Finding</dt><dd>One product, one designer: changes lagging behind in the library and documentation to strengthen.</dd></div>
+<div><dt>Decision</dt><dd>A 5-step workflow, from roadmap to deployment, to add every component to the design system.</dd></div>
+<div><dt>Impact</dt><dd class="eff"><span>5 designers</span>aligned around a shared design system, across the 5 tools.</dd></div>
+</dl></article>
+</div>
+</section>
+
+<!-- 6. RÉALISATIONS -->
+<section class="sec" id="realisations" aria-labelledby="h-real">
+<div class="sec-head"><p class="k">Deliverables</p><h2 class="title" id="h-real">Documentation and handoff, in practice.</h2>
+<p class="lead">A component documented with its RGAA criteria, and the developer handoff file.</p></div>
+<div class="shots">
+<figure class="shot reveal"><img src="../assets/cas03-realisations-01.jpg" alt="Documentation of the icon-only button component: keyboard interactions, HTML elements and roles, RGAA criteria." loading="lazy" decoding="async"><figcaption>Component documentation · Icon-only button <span>Keyboard, HTML, RGAA</span></figcaption></figure>
+<figure class="shot reveal"><img src="../assets/cas03-realisations-07.jpg" alt="Ready to Dev file: user story information sheet with technical specifications." loading="lazy" decoding="async"><figcaption>Ready to Dev file <span>Information sheet and specifications</span></figcaption></figure>
+</div>
+<div class="cta-row"><a class="btn btn-primary" href="cas03-realisations.html">All deliverables →</a></div>
+</section>
+
+<!-- 7. CE QUI A ÉTÉ MIS EN PLACE -->
+<section class="sec" id="resultats" aria-labelledby="h-res">
+<div class="sec-head"><p class="k">What was put in place</p><h2 class="title" id="h-res">Three practices for more realistic delivery.</h2>
+<p class="lead">By the end of the engagement, three practices were in place, aligned with developers.</p></div>
+<ol class="benef n3 reveal">
+<li><b>01</b><strong>A validation workflow before development</strong>Design review, tech review and feature sharing ahead of refinement.</li>
+<li><b>02</b><strong>Documentation with accessibility built in</strong>HTML rules (elements, roles, attributes) and RGAA recommendations in the component documentation.</li>
+<li><b>03</b><strong>A shared process for designers</strong>A 5-step workflow shared by the designers of all 5 tools.</li>
+</ol>
+
+<h3 class="sub">What I learned</h3>
+<div class="learn reveal">
+<div class="card"><b>01</b><p>Managing a design system shared by 5 designers.</p></div>
+<div class="card"><b>02</b><p>Building digital accessibility (RGAA) into the design process.</p></div>
+<div class="card"><b>03</b><p>Testing before production.</p></div>
+</div>
+</section>
+
+<aside class="next reveal" aria-label="Next case study">
+<h2>Back to the three case studies</h2>
+<a class="btn" data-umami-event="cas-complet" href="index.html">See the work →</a>
+</aside>
+
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="wrap"><span>Quentin Féret · Portfolio <small>Anonymous, cookie-free visitor analytics</small></span>
+<nav class="foot-nav" aria-label="Footer"><ul>
+<li><a href="accessibilite.html">Accessibility: not assessed</a></li>
+<li><a href="plan-du-site.html">Sitemap</a></li>
+<li><a href="https://www.linkedin.com/in/quentin-feret" target="_blank" rel="noopener" data-umami-event="contact-linkedin">Get in touch on LinkedIn →<span class="sr-only"> (opens in a new tab)</span></a></li>
+</ul></nav></div>
+</footer>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+    var links=[].slice.call(document.querySelectorAll('.snav a'));
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on')});map[e.target.id].classList.add('on')}})},{rootMargin:'-30% 0px -60% 0px'});
+    Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)so.observe(s)});
+  }else{els.forEach(function(e){e.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
